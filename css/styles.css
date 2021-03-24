@@ -9993,7 +9993,7 @@ h3 {
 }
 
 .row {
-  text-align: left;
+  text-align: justify;
 }
 
 .paper {
@@ -10012,6 +10012,7 @@ h3 {
 
 .dataset {
   color: #2b4fcb;
+  font-size: 1.7rem;
 }
 
 strong {
@@ -10026,6 +10027,12 @@ strong {
   font-size: 1.2rem;
   font-style: italic;
   font-weight: normal;
+}
+
+.figure {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .divider-custom {
