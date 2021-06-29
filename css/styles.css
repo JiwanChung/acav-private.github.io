@@ -7342,7 +7342,6 @@ button.bg-dark:focus {
 }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
 }
 
@@ -7362,9 +7361,8 @@ button.bg-dark:focus {
   z-index: 1030;
 }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports (position: sticky) {
   .sticky-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -10285,8 +10283,12 @@ form .row:first-child .floating-label-form-group {
 }
 
 .explanation {
+  align-items: left;
+  text-align: left;
   margin-top: 1.7rem;
   padding-top: 3rem;
+  padding-right: 2rem;
+  padding-left: 3rem;
 }
 
 .controls {

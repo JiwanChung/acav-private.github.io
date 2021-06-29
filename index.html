@@ -1,5 +1,180 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecting to http://davinci.snu.vision:8500/</title>
-<meta http-equiv="refresh" content="0;url=http://davinci.snu.vision:8500/">
-<link rel="canonical" href="http://davinci.snu.vision:8500/">
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ACAV100M</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg fixed-top bg-primary" id="mainNav">
+            <a class="navbar-brand js-scroll-trigger" href="https://jiwanchung.github.io/acav-private.github.io/#page-top">ACAV100M</a>
+            <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://jiwanchung.github.io/acav-private.github.io/#about">About</a></li>
+                    <!-- li.nav-item.mx-0.mx-lg-1-->
+                    <!--     a.nav-link.py-3.px-0.px-lg-3.rounded.js-scroll-trigger(href='index#examples') Examples-->
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://jiwanchung.github.io/acav-private.github.io/#downloads">Downloads</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://jiwanchung.github.io/acav-private.github.io/#publications">Publication</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://acav100m.azurewebsites.net/explore">Explore</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-secondary text-light text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <!-- img.masthead-avatar.mb-5(src='assets/img/avataaars.svg', alt='')-->
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading mb-0">ACAV100M</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light"></div>
+                <!--     .divider-custom-line-->
+                <!-- Masthead Subheading-->
+                <h3 class="masthead-subheading font-weight-light mb-0">Automatic Curation of Large-Scale Audio-Visual Datasets</h3>
+            </div>
+        </header>
+        <!-- About Section-->
+        <section class="page-section text-dark mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-dark">About</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light"></div>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-12 ml-auto"><img class="figure" src="assets/img/concepts_v1.png" alt="" width="70%" /></div>
+                    <div class="col-lg-12 ml-auto" style="padding-top: 1.4rem">
+                        <!-- p.lead(style="margin-bottom: 0rem")-->
+                        <p class="lead">
+                            We present an
+                            <strong>automated curation pipeline for</strong>
+                            audio-visual representation learning. We formulate an optimization problem where the goal is to find a subset that maximizes the mutual information between audio and visual channels of videos. This helps us find a subset with high audio-visual correspondence, which could be useful for self-supervised audio-visual representation learning.
+                        </p>
+                    </div>
+                    <div class="col-lg-12 ml-auto" style="padding-top: 0.7rem">
+                        <p class="lead">
+                            Using our approach, we created datasets at varying scales from a large collection of unlabeled videos an unprecedented scale: We process 140 million full-length videos (total duration 1,030 years) and produce a dataset of
+                            <strong>100 million 10-second clips (31 years)</strong>
+                            with high audio-visual correspondence. This is two orders of magnitude larger than the current largest video dataset used in the audio-visual learning literature, i.e., AudioSet (8 months), and twice as large as the largest video dataset in the literature, i.e., HowTo100M (15 years).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Examples Section-->
+        <!-- section#examples.page-section.bg-primary.text-dark.mb-0-->
+        <!--     .container-->
+        <!--         // Examples Section Heading-->
+        <!--         h2.page-section-heading.text-dark Examples-->
+        <!--         each row in examples-->
+        <!--             .row(style="margin-top:1.7rem")-->
+        <!--                 each video in row-->
+        <!--                     .col-lg-3.ml-auto(style="padding-left:0.3rem; padding-right:0.3rem")-->
+        <!--                         iframe(width="98%" src=video)-->
+        <!-- Download Section-->
+        <section class="page-section text-dark mb-0" id="downloads">
+            <div class="container download">
+                <!-- Download Section Heading-->
+                <h2 class="page-section-heading text-dark">Downloads</h2>
+                <div class="divider-custom divider-light"></div>
+                <div class="row" style="margin-top: 1.7rem">
+                    <div class="col-lg-12 ml-auto" style="margin-top: 1rem"><p class="lead">We provide five curated datasets of different scales; all the videos are 10-seconds long. The datasets are automatically constructed using our approach (using the clustering-based approach with 500 cluster centroids).</p></div>
+                    <div class="col-lg-12 ml-auto" style="padding-top: 0.7rem"><p class="lead" style="margin-bottom: 0; font-weight: bold">Number of video clips (total duration)</p></div>
+                    <div class="col-lg-12 ml-auto">
+                        <a class="dataset" href="https://mega.nz/file/3AhUiQpY#xKfft2V0bXn30JCy2bclWpKHHR7K8Oubs501xlAuyIo">20K (2 days)</a>
+                        &nbsp; | &nbsp;
+                        <a class="dataset" href="https://mega.nz/file/TUhQ0I4Q#K6L1Qkh4idVHpXYM868TbupaueFzHD2JJMZXVHozGfo">200K (23 days)</a>
+                        &nbsp; | &nbsp;
+                        <a class="dataset" href="https://mega.nz/file/zYh2xArA#cyolGIjFqBo8FzMEf3mdCZVRPFrW0I5B22hlTIE7R-0">2M (8 months)</a>
+                        &nbsp; | &nbsp;
+                        <a class="dataset" href="https://mega.nz/file/PEpkGA5Q#Eo8yKYIutH6zbLRozjSoE6AvrbFftf2vWF0tzwk56-k">10M (3 years)</a>
+                        &nbsp; | &nbsp;
+                        <a class="dataset" href="https://mega.nz/file/OI5wiBbK#E9GxPyjQkRU1xl8ttlE7Pi4t4pAM46h-Kz1SdtAFBjs">100M (31 years)</a>
+                    </div>
+                    <div class="col-lg-12 ml-auto" style="padding-top: 0.7rem"><p class="lead">Each dataset contains YouTube ID and start second in a CSV format:</p></div>
+                    <div class="col-lg-12 ml-auto"><p class="data-structure"># YouTube ID, start second</p></div>
+                    <!-- .col-lg-7.ml-auto-->
+                    <!--     p.data-structure-->
+                    <!--         | # YouTube ID, start second, ImageNet label, Kinetics400 label, AudioSet label-->
+                    <!--     a.dataset 100M with Classification Results-->
+                    <!-- .col-lg-5.ml-auto-->
+                    <!--     p.lead-->
+                    <!--         | For the 100M scale dataset, we additionally provide-->
+                    <!--         | [ImageNet, Kinetics400, AudioSet] category classification results.-->
+                </div>
+                <!-- .row(style="margin-top:1.7rem")-->
+                <!--     .col-lg-12.ml-auto-->
+                <!--         .p-->
+                <!--             | License?-->
+                <!-- .row(style="margin-top:1.7rem")-->
+                <!--     a.dataset(style="margin-left:auto;margin-right:auto")-->
+                <!--         .col-lg-12.ml-auto-->
+                <!--             img(src='assets/img/GitHub-Mark-120px-plus.png', alt='')-->
+                <!--         .col-lg-12.ml-auto Code-->
+            </div>
+        </section>
+        <section class="page-section text-dark mb-0" id="publications">
+            <div class="container">
+                <h2 class="page-section-heading text-dark">Publication</h2>
+                <div class="divider-custom divider-light"></div>
+                <div class="row" style="margin-top: 1.7rem">
+                    <div class="col-lg-12 ml-auto"><p class="paper">Automatic Curation of Large-Scale Datasets for Audio-Visual Representation Learning</p></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 ml-auto"><p class="lead">Sangho Lee, Jiwan Chung, Youngjae Yu, Gunhee Kim, Thomas Breuel, Gal Chechik, Yale Song</p></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 ml-auto">
+                        <a class="paper-sub" href="https://arxiv.org/abs/2101.10803">ArXiv</a>
+                        <!--| &nbsp; | &nbsp;-->
+                        <!--a(href="https://arxiv.org/abs/2101.10803").paper-sub Bibtex-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section#teams.page-section.text-dark.mb-0-->
+        <!--     .container-->
+        <!--         h2.page-section-heading.text-dark Teams-->
+        <!--         .divider-custom.divider-light-->
+        <!-- section#acknowledgements.page-section.text-dark.mb-0-->
+        <!--     .container-->
+        <!--         h2.page-section-heading.text-dark Acknowledgements-->
+        <!--         .divider-custom.divider-light-->
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container">
+                <small>
+                    Copyright © Jiwan Chung 2020 adapted from
+                    <a href="https://startbootstrap.com/theme/freelancer">Start Bootstrap</a>
+                </small>
+            </div>
+        </div>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
