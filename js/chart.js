@@ -12,12 +12,14 @@
         '#17becf'
     ];
 
+    const url = window.location.href;
+
     function label_func(context) {
         return ' ' + context.formattedValue + ' %';
     }
 
     async function get_hist(name) {
-        const res = await axios.get(`assets/chart/histogram/${name}.json`);
+        const res = await axios.get(`${url}assets/chart/histogram/${name}.json`);
         const dataset = res.data;
         const data = {
             labels: dataset.labels,
@@ -83,7 +85,7 @@
     };
 
     async function get_pie(name) {
-        const res = await axios.get(`assets/chart/pie/${name}.json`);
+        const res = await axios.get(`${url}assets/chart/pie/${name}.json`);
         const dataset = res.data;
         const data = {
             labels: dataset.labels,
