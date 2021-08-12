@@ -1,0 +1,30 @@
+{
+    "labels": [
+        "Human sounds",
+        "Channel, environment and background",
+        "Music",
+        "Source-ambiguous sounds",
+        "Sounds of things",
+        "Animal",
+        "Natural sounds"
+    ],
+    "counts": [
+        112300869,
+        30413105,
+        70821139,
+        9244680,
+        35317797,
+        8699422,
+        1726228
+    ],
+    "percents": [
+        41.82165722415684,
+        11.326060641901982,
+        26.374305255664275,
+        3.4427858087813927,
+        13.15260347670466,
+        3.2397277792417523,
+        0.6428598135490992
+    ],
+    "title": "High Level Audio Labels"
+}

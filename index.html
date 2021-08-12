@@ -27,33 +27,34 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://acav100m.github.io/#about">About</a></li>
-                    <!-- li.nav-item.mx-0.mx-lg-1-->
-                    <!--     a.nav-link.py-3.px-0.px-lg-3.rounded.js-scroll-trigger(href='index#examples') Examples-->
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://acav100m.github.io/#statistics">Statistics</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://acav100m.github.io/#downloads">Downloads</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://acav100m.github.io/#publications">Publication</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://acav100m.azurewebsites.net/explore">Explore</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://acav100m.azurewebsites.net/explore_classification">Explore</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://acav100m.azurewebsites.net/explore_cluster">Cluster</a></li>
                 </ul>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead bg-secondary text-light text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <!-- img.masthead-avatar.mb-5(src='assets/img/avataaars.svg', alt='')-->
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading mb-0">ACAV100M</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light"></div>
-                <!--     .divider-custom-line-->
-                <!-- Masthead Subheading-->
-                <h3 class="masthead-subheading font-weight-light mb-0">Automatic Curation of Large-Scale Audio-Visual Datasets</h3>
+        <header class="masthead bg-logo text-light text-center">
+            <video class="title-video" autoplay="" muted="" loop=""><source src="assets/img/logo_small.mp4" type="video/mp4" /></video>
+            <div class="container-fluid bg-logo-bar">
+                <div class="container d-flex align-items-center flex-column">
+                    <!-- Masthead Heading-->
+                    <h1 class="masthead-heading mb-0">ACAV100M</h1>
+                    <!-- Icon Divider-->
+                    <div class="divider-custom divider-light"></div>
+                    <!--     .divider-custom-line-->
+                    <!-- Masthead Subheading-->
+                    <h3 class="masthead-subheading font-weight-light mb-0">Automatic Curation of Large-Scale Audio-Visual Datasets</h3>
+                </div>
             </div>
         </header>
         <!-- About Section-->
         <section class="page-section text-dark mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
-                <h2 class="page-section-heading text-dark">About</h2>
+                <h2 class="page-section-heading text-dark">What is ACAV100M?</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light"></div>
                 <!-- About Section Content-->
@@ -77,16 +78,41 @@
                 </div>
             </div>
         </section>
-        <!-- Examples Section-->
-        <!-- section#examples.page-section.bg-primary.text-dark.mb-0-->
-        <!--     .container-->
-        <!--         // Examples Section Heading-->
-        <!--         h2.page-section-heading.text-dark Examples-->
-        <!--         each row in examples-->
-        <!--             .row(style="margin-top:1.7rem")-->
-        <!--                 each video in row-->
-        <!--                     .col-lg-3.ml-auto(style="padding-left:0.3rem; padding-right:0.3rem")-->
-        <!--                         iframe(width="98%" src=video)-->
+        <!-- Statistics Section-->
+        <section class="page-section text-dark mb-0" id="statistics">
+            <div class="container">
+                <!-- Section Heading-->
+                <h2 class="page-section-heading text-dark">Statistics</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light"></div>
+                <!-- Section Content-->
+                <div class="row" style="margin-top: 1.7rem">
+                    <div class="col-lg-12 ml-auto" style="margin-top: 1rem"><p class="lead">ACAV100M is an automatically curated dataset of 10-seconds clips with high audio-visual correspondence. We provide the categorization results of the clips using pretrained audio (AudioSet), video (Kinetics400) and image (ImageNet) classifiers.</p></div>
+                </div>
+                <div class="row" style="text-align: center">
+                    <div class="col-lg-12 ml-auto" style="margin-top: 1rem"><p class="lead figure-head">High Level Audio Labels (AudioSet)</p></div>
+                    <div class="col-lg-12 ml-auto" style="margin-top: 2rem; margin-bottom: 2rem"><canvas id="pie_audio" height="400"></canvas></div>
+                    <!-- .col-lg-12.ml-auto-->
+                    <!--     a(href='assets/img/figures/pie.pdf')-->
+                    <!--         img.figure(src='assets/img/figures/pie.png', alt='', width='60%')-->
+                    <div class="col-lg-12 ml-auto" style="margin-top: 1rem"><p class="lead figure-head">Audio Labels (AudioSet)</p></div>
+                    <div class="col-lg-12 ml-auto"><canvas id="histogram_audio" height="500"></canvas></div>
+                    <!-- .col-lg-12.ml-auto-->
+                    <!--     a(href='assets/img/figures/top_5_audio_labels.pdf')-->
+                    <!--         img.figure(src='assets/img/figures/top_5_audio_labels.png', alt='', width='100%')-->
+                    <div class="col-lg-12 ml-auto" style="margin-top: 1rem"><p class="lead figure-head">Video Labels (Kinetics 400)</p></div>
+                    <div class="col-lg-12 ml-auto"><canvas id="histogram_video" height="400"></canvas></div>
+                    <!-- .col-lg-12.ml-auto-->
+                    <!--     a(href='assets/img/figures/top_5_video_labels.pdf')-->
+                    <!--         img.figure(src='assets/img/figures/top_5_video_labels.png', alt='', width='100%')-->
+                    <div class="col-lg-12 ml-auto" style="margin-top: 1rem"><p class="lead figure-head">Image Labels (ImageNet)</p></div>
+                    <div class="col-lg-12 ml-auto"><canvas id="histogram_image" height="300"></canvas></div>
+                    <!-- .col-lg-12.ml-auto-->
+                    <!--     a(href='assets/img/figures/top_5_image_labels.pdf')-->
+                    <!--         img.figure(src='assets/img/figures/top_5_image_labels.png', alt='', width='100%')-->
+                </div>
+            </div>
+        </section>
         <!-- Download Section-->
         <section class="page-section text-dark mb-0" id="downloads">
             <div class="container download">
@@ -95,38 +121,29 @@
                 <div class="divider-custom divider-light"></div>
                 <div class="row" style="margin-top: 1.7rem">
                     <div class="col-lg-12 ml-auto" style="margin-top: 1rem"><p class="lead">We provide five curated datasets of different scales; all the videos are 10-seconds long. The datasets are automatically constructed using our approach (using the clustering-based approach with 500 cluster centroids).</p></div>
-                    <div class="col-lg-12 ml-auto" style="padding-top: 0.7rem"><p class="lead" style="margin-bottom: 0; font-weight: bold">Number of video clips (total duration)</p></div>
-                    <div class="col-lg-12 ml-auto">
-                        <a class="dataset" href="https://mega.nz/file/3AhUiQpY#xKfft2V0bXn30JCy2bclWpKHHR7K8Oubs501xlAuyIo">20K (2 days)</a>
-                        &nbsp; | &nbsp;
-                        <a class="dataset" href="https://mega.nz/file/TUhQ0I4Q#K6L1Qkh4idVHpXYM868TbupaueFzHD2JJMZXVHozGfo">200K (23 days)</a>
-                        &nbsp; | &nbsp;
-                        <a class="dataset" href="https://mega.nz/file/zYh2xArA#cyolGIjFqBo8FzMEf3mdCZVRPFrW0I5B22hlTIE7R-0">2M (8 months)</a>
-                        &nbsp; | &nbsp;
-                        <a class="dataset" href="https://mega.nz/file/PEpkGA5Q#Eo8yKYIutH6zbLRozjSoE6AvrbFftf2vWF0tzwk56-k">10M (3 years)</a>
-                        &nbsp; | &nbsp;
-                        <a class="dataset" href="https://mega.nz/file/OI5wiBbK#E9GxPyjQkRU1xl8ttlE7Pi4t4pAM46h-Kz1SdtAFBjs">100M (31 years)</a>
-                    </div>
                     <div class="col-lg-12 ml-auto" style="padding-top: 0.7rem"><p class="lead">Each dataset contains YouTube ID and start second in a CSV format:</p></div>
                     <div class="col-lg-12 ml-auto"><p class="data-structure"># YouTube ID, start second</p></div>
-                    <!-- .col-lg-7.ml-auto-->
-                    <!--     p.data-structure-->
-                    <!--         | # YouTube ID, start second, ImageNet label, Kinetics400 label, AudioSet label-->
-                    <!--     a.dataset 100M with Classification Results-->
-                    <!-- .col-lg-5.ml-auto-->
-                    <!--     p.lead-->
-                    <!--         | For the 100M scale dataset, we additionally provide-->
-                    <!--         | [ImageNet, Kinetics400, AudioSet] category classification results.-->
                 </div>
-                <!-- .row(style="margin-top:1.7rem")-->
-                <!--     .col-lg-12.ml-auto-->
-                <!--         .p-->
-                <!--             | License?-->
-                <!-- .row(style="margin-top:1.7rem")-->
-                <!--     a.dataset(style="margin-left:auto;margin-right:auto")-->
-                <!--         .col-lg-12.ml-auto-->
-                <!--             img(src='assets/img/GitHub-Mark-120px-plus.png', alt='')-->
-                <!--         .col-lg-12.ml-auto Code-->
+                <div class="row" style="margin-top: 0rem; text-align: center">
+                    <div class="col-lg-6 ml-auto" style="padding-top: 1rem">
+                        <p class="lead download_sub" style="margin-bottom: 2rem; font-weight: bold">Dataset</p>
+                        <ul style="text-align: justify; margin: auto; width: 70%">
+                            <li class="lead" style="margin-bottom: 0; font-weight: bold"><a class="dataset" href="https://mega.nz/file/3AhUiQpY#xKfft2V0bXn30JCy2bclWpKHHR7K8Oubs501xlAuyIo">20K (2 days)</a></li>
+                            <li class="lead" style="margin-bottom: 0; font-weight: bold"><a class="dataset" href="https://mega.nz/file/TUhQ0I4Q#K6L1Qkh4idVHpXYM868TbupaueFzHD2JJMZXVHozGfo">200K (23 days)</a></li>
+                            <li class="lead" style="margin-bottom: 0; font-weight: bold"><a class="dataset" href="https://mega.nz/file/zYh2xArA#cyolGIjFqBo8FzMEf3mdCZVRPFrW0I5B22hlTIE7R-0">2M (8 months)</a></li>
+                            <li class="lead" style="margin-bottom: 0; font-weight: bold"><a class="dataset" href="https://mega.nz/file/PEpkGA5Q#Eo8yKYIutH6zbLRozjSoE6AvrbFftf2vWF0tzwk56-k">10M (3 years)</a></li>
+                            <li class="lead" style="margin-bottom: 0; font-weight: bold"><a class="dataset" href="https://mega.nz/file/OI5wiBbK#E9GxPyjQkRU1xl8ttlE7Pi4t4pAM46h-Kz1SdtAFBjs">100M (31 years)</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 ml-auto" style="margin-top: 1rem">
+                        <p class="lead download_sub" style="margin-bottom: 2rem; font-weight: bold">Code</p>
+                        <a class="paper-sub" style="margin-top: 4rem; display: block" href="https://github.com/sangho-vision/acav100m"><img src="assets/img/GitHub-Mark-120px-plus.png" /></a>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 0rem; text-align: center">
+                    <div class="col-lg-6 ml-auto" style="margin-top: 1rem"><p class="lead" style="margin-top: 2rem; font-weight: bold">Number of video clips (total duration)</p></div>
+                    <div class="col-lg-6 ml-auto" style="margin-top: 1rem"><p class="lead" style="margin-top: 2rem; font-weight: bold">Data curation pipeline and evaluation scripts</p></div>
+                </div>
             </div>
         </section>
         <section class="page-section text-dark mb-0" id="publications">
@@ -137,25 +154,47 @@
                     <div class="col-lg-12 ml-auto"><p class="paper">Automatic Curation of Large-Scale Datasets for Audio-Visual Representation Learning</p></div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12 ml-auto"><p class="lead">Sangho Lee, Jiwan Chung, Youngjae Yu, Gunhee Kim, Thomas Breuel, Gal Chechik, Yale Song</p></div>
+                    <div class="col-lg-12 ml-auto"><p class="lead">Sangho Lee*, Jiwan Chung*, Youngjae Yu, Gunhee Kim, Thomas Breuel, Gal Chechik, Yale Song</p></div>
                 </div>
                 <div class="row">
+                    <div class="col-lg-12 ml-auto"><p class="lead">ICCV 2021</p></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 ml-auto paper-sub">
+                        <a class="paper-sub" href="https://arxiv.org/abs/2101.10803">PDF</a>
+                        &nbsp; | &nbsp;
+                        <a class="paper-sub bibtex_btn" href="">Bibtex</a>
+                    </div>
+                </div>
+                <div class="row bibtex">
                     <div class="col-lg-12 ml-auto">
-                        <a class="paper-sub" href="https://arxiv.org/abs/2101.10803">ArXiv</a>
+                        <pre>
+@inproceedings{lee2021acav100m,
+   title="{Automatic Curation of Large-Scale Datasets for Audio-Visual Representation Learning}",
+   author={Sangho Lee and Jiwan Chung and Youngjae Yu and Gunhee Kim and Thomas Breuel and Gal Chechik and Yale Song},
+   booktitle={ICCV},
+   year=2021
+}</pre
+                        >
                         <!--| &nbsp; | &nbsp;-->
                         <!--a(href="https://arxiv.org/abs/2101.10803").paper-sub Bibtex-->
                     </div>
                 </div>
             </div>
         </section>
-        <!-- section#teams.page-section.text-dark.mb-0-->
+        <!-- section#acknowledgement.page-section.text-dark.mb-0-->
         <!--     .container-->
-        <!--         h2.page-section-heading.text-dark Teams-->
+        <!--         h2.page-section-heading.text-dark Acknowledgement-->
         <!--         .divider-custom.divider-light-->
-        <!-- section#acknowledgements.page-section.text-dark.mb-0-->
-        <!--     .container-->
-        <!--         h2.page-section-heading.text-dark Acknowledgements-->
-        <!--         .divider-custom.divider-light-->
+        <!--         .row(style="margin-top:1.7rem")-->
+        <!--             .col-lg-3.ml-auto.logo-block-->
+        <!--                 img.logo(src='assets/img/acknowledgement/snuvl.png', alt='')-->
+        <!--             .col-lg-3.ml-auto.logo-block-->
+        <!--                 img.logo(src='assets/img/acknowledgement/Microsoft.png', alt='')-->
+        <!--             .col-lg-3.ml-auto.logo-block-->
+        <!--                 img.logo(src='assets/img/acknowledgement/NVIDIA.jpg', alt='')-->
+        <!--             .col-lg-3.ml-auto.logo-block-->
+        <!--                 img.logo(src='assets/img/acknowledgement/iitp.jpg', alt='')-->
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
             <div class="container">
@@ -169,6 +208,10 @@
         <div class="scroll-to-top d-lg-none position-fixed">
             <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
         </div>
+        <!-- Chart JS-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+        <script src="js/chart.js"></script>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
