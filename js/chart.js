@@ -17,7 +17,7 @@
     }
 
     async function get_hist(name) {
-        const res = await axios.get(`/chart/histogram/${name}`);
+        const res = await axios.get(`/assets/chart/histogram/${name}.json`);
         const dataset = res.data;
         const data = {
             labels: dataset.labels,
@@ -83,7 +83,7 @@
     };
 
     async function get_pie(name) {
-        const res = await axios.get(`/chart/pie/${name}`);
+        const res = await axios.get(`/assets/chart/pie/${name}.json`);
         const dataset = res.data;
         const data = {
             labels: dataset.labels,
