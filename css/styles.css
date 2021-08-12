@@ -9976,8 +9976,9 @@ h3 {
   }
 }
 .page-section {
-  padding-top: 6rem;
-  margin-top: -2rem;
+  padding-top: 5rem;
+  z-index: 2;
+  background-color: white;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
@@ -9999,13 +10000,26 @@ h3 {
 }
 
 .paper-sub {
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: #2b4fcb;
+}
+
+.bibtex {
+  display: none;
+  margin-top: 1rem;
 }
 
 .download {
   font-size: 2rem;
   font-weight: normal;
+}
+
+.download_sub {
+  font-size: 2.5rem;
+}
+
+.figure-head {
+  font-weight: bold;
 }
 
 .dataset {
@@ -10031,6 +10045,19 @@ strong {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.logo-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .divider-custom {
@@ -10167,6 +10194,14 @@ strong {
   width: 15rem;
 }
 
+@media (max-width: 992px) {
+  .masthead {
+    background-color: black;
+  }
+  .masthead .title-video {
+    display: none;
+  }
+}
 @media (min-width: 992px) {
   .masthead {
     padding-top: calc(6rem + 104px);
@@ -10178,6 +10213,32 @@ strong {
   }
   .masthead .masthead-subheading {
     font-size: 2.25rem;
+  }
+
+  .title-video {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: -1;
+    min-width: 100%;
+  }
+
+  .bg-logo {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    background-position: 50% 0%;
+    z-index: 1;
+  }
+
+  .bg-logo-bar {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    padding-top: 1.1rem;
+    padding-bottom: 1.2rem;
+    margin-top: 0.27rem;
   }
 }
 .portfolio .portfolio-item {
