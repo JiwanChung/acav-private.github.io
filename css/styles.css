@@ -9975,6 +9975,21 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.embed_container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+}
+
+.embeded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100%;
+}
+
 .page-section {
   padding-top: 5rem;
   z-index: 2;
@@ -9996,7 +10011,7 @@ h3 {
 }
 
 .paper {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
 }
 
 .paper-sub {
