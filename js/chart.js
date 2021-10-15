@@ -12,7 +12,7 @@
         '#17becf'
     ];
 
-    const url = window.location.href;
+    const url = window.location.href.split('#')[0];
 
     function label_func(context) {
         return ' ' + context.formattedValue + ' %';
